@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 
 const happyFace = require("../assets/images/happyFace.png");
 const sadFace = require("../assets/images/sadFace.png");
@@ -9,9 +9,10 @@ const angryFace = require("../assets/images/angryFace.png");
 
 
 
-const Home = ({navigation}) => {
-  
+const HomeScreen = () => {
 
+  const navigation = useNavigation();
+  
   return (
     <View style={styles.container}>
       <Text
@@ -24,11 +25,20 @@ const Home = ({navigation}) => {
       >
         What is your mood today?
       </Text>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('HappyScreen')}>
+      <TouchableOpacity 
+      style={styles.button} 
+      onPress={() => {
+        navigation.navigate('HappyScreen'
+        );
+        }}>
       <Image source={happyFace} style={styles.image} />
       </TouchableOpacity>
+      <TouchableOpacity>
       <Image source={sadFace} style={styles.image} />
+      </TouchableOpacity>
+      <TouchableOpacity>
       <Image source={angryFace} style={styles.image} />
+      </TouchableOpacity>
       <StatusBar style="auto" />
     </View>
   );
@@ -54,4 +64,4 @@ const styles = StyleSheet.create({
 
 
 
-export default Home;
+export default HomeScreen;
