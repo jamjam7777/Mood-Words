@@ -7,7 +7,7 @@ const HappyScreen = () => {
   
   return (
     <View style={styles.container}>
-      <Text>HELLO</Text>
+      <Text>IM HAPPY</Text>
     </View>
   );
 };

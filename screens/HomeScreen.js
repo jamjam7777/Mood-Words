@@ -7,8 +7,6 @@ const sadFace = require("../assets/images/sadFace.png");
 const angryFace = require("../assets/images/angryFace.png");
 
 
-
-
 const HomeScreen = () => {
 
   const navigation = useNavigation();
@@ -33,10 +31,22 @@ const HomeScreen = () => {
         }}>
       <Image source={happyFace} style={styles.image} />
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity
+      style={styles.button} 
+      onPress={() => {
+        navigation.navigate('SadScreen'
+        );
+        }}
+      >
       <Image source={sadFace} style={styles.image} />
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity
+      style={styles.button} 
+      onPress={() => {
+        navigation.navigate('AngryScreen'
+        );
+        }}
+      >
       <Image source={angryFace} style={styles.image} />
       </TouchableOpacity>
       <StatusBar style="auto" />
