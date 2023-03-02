@@ -1,9 +1,14 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import happyAffirm from '../components/happyAffirm';
 
 
 
 const HappyScreen = () => {
+
+  let randomHappy = happyAffirm[Math. floor(Math. random() * happyAffirm)]
+
+  console.log(randomHappy)
   
   return (
     <View style={styles.container}>
