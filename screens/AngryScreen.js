@@ -109,9 +109,11 @@ const AngryScreen = () => {
   
 
   return (
-    <View style={styles.container}>
-      <Text style={{marginBottom: 10}}>{randomAngry()}</Text>
+    <Card containerStyle={{padding: 10}}>
+    <View>
+      <Text style={styles.text}>{randomAngry()}</Text>
     </View>
+    </Card>
   );
 };
 
@@ -131,6 +133,9 @@ const styles = StyleSheet.create({
     height: 120,
     borderRadius: 50,
   },
+  text: {
+    fontSize: 20,
+  }
 });
 
 export default AngryScreen;
