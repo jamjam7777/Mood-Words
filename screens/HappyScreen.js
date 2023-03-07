@@ -2,7 +2,11 @@ import { StyleSheet, Text, View } from "react-native";
 import happyAffirm from "../components/happyAffirm";
 import React, { useState } from "react";
 
+
+
 function randomHappy() {
+    
+   
   const happyAffirm= [
     {
         id: 0,
@@ -101,14 +105,11 @@ function randomHappy() {
 }
 
 const HappyScreen = () => {
-  // const [happyAffirm, setHappyAffirm] = useState(randomHappy());
-  //   const randomString = randomHappy();
-  //   setHappyAffirm(randomString);
+  
 
   return (
     <View style={styles.container}>
       <Text>IM HAPPY</Text>
-      <Text>{happyAffirm}</Text>
       <Text>{randomHappy()}</Text>
     </View>
   );
