@@ -14,10 +14,26 @@ const App = () => {
   return (
     <NavigationContainer>
     <Stack.Navigator initialRouteName='HomeScreen'>
-      <Stack.Screen name="HomeScreen" component={HomeScreen} />
-      <Stack.Screen name="HappyScreen" component={HappyScreen} />
-      <Stack.Screen name="SadScreen" component={SadScreen} />
-      <Stack.Screen name="AngryScreen" component={AngryScreen} />
+      <Stack.Screen 
+      name="HomeScreen" 
+      component={HomeScreen} 
+      options={{ title: 'Home' }}
+      />
+      <Stack.Screen 
+      name="HappyScreen" 
+      component={HappyScreen}
+      options={{ title: 'Mood: Happy' }}
+       />
+      <Stack.Screen 
+      name="SadScreen" 
+      component={SadScreen} 
+      options={{ title: 'Mood: Sad' }}
+      />
+      <Stack.Screen 
+      name="AngryScreen" 
+      component={AngryScreen} 
+      options={{ title: 'Mood: Angry' }}
+      />
 
     </Stack.Navigator>
     </NavigationContainer>
