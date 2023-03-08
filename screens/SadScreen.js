@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
+import { Card } from "react-native-elements";
 import happyAffirm from "../components/happyAffirm";
 import React, { useState } from "react";
 
@@ -110,8 +111,18 @@ const SadScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text>IM SAD</Text>
-      <Text>{randomSad()}</Text>
+    <Card>
+    <View>
+      <Text 
+      style={{
+        color: '#2f4f4f',
+        fontFamily: 'Roboto',
+        fontSize: 30,
+        padding: 50,
+      }}
+    >{randomSad()}</Text>
+    </View>
+    </Card>
     </View>
   );
 };

@@ -67,7 +67,7 @@ function randomAngry() {
     },
     {
         id: 14,
-        text:"I deserve lI will create a peaceful environment"
+        text:"I deserve love. I will create a peaceful environment"
     },
     {
         id: 15,
@@ -109,11 +109,20 @@ const AngryScreen = () => {
   
 
   return (
-    <Card containerStyle={{padding: 10}}>
+    <View style={styles.container}>
+    <Card>
     <View>
-      <Text style={styles.text}>{randomAngry()}</Text>
+      <Text 
+      style={{
+        color: '#2f4f4f',
+        fontFamily: 'Roboto',
+        fontSize: 30,
+        padding: 50,
+      }}
+    >{randomAngry()}</Text>
     </View>
     </Card>
+    </View>
   );
 };
 
@@ -133,9 +142,7 @@ const styles = StyleSheet.create({
     height: 120,
     borderRadius: 50,
   },
-  text: {
-    fontSize: 20,
-  }
+
 });
 
 export default AngryScreen;

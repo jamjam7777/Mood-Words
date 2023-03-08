@@ -57,7 +57,7 @@ export const angryAffirm= [
     },
     {
         id: 14,
-        text:"I deserve lI will create a peaceful environment"
+        text:"I deserve love. I will create a peaceful environment"
     },
     {
         id: 15,

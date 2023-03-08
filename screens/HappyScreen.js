@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
+import { Card } from "react-native-elements";
 import happyAffirm from "../components/happyAffirm";
 import React, { useState } from "react";
 
@@ -109,8 +110,18 @@ const HappyScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text>IM HAPPY</Text>
-      <Text>{randomHappy()}</Text>
+    <Card>
+    <View>
+      <Text 
+      style={{
+        color: '#2f4f4f',
+        fontFamily: 'Roboto',
+        fontSize: 30,
+        padding: 50,
+      }}
+    >{randomHappy()}</Text>
+    </View>
+    </Card>
     </View>
   );
 };
