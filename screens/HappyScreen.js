@@ -1,9 +1,24 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Button } from "react-native";
 import { Card } from "react-native-elements";
 import {happyAffirm} from "../components/happyAffirm";
 
+let selectedText;
+
+let favoritesArr = [];
+
+function pushFavorite(){
+  // let favoriteText;
+  // favoriteText = selectedText; 
+  favoritesArr.push(selectedText)
+  
+  console.log(favoritesArr)
+}
+
 function randomHappy(happyAffirm) {
-  return (happyAffirm[Math.floor(Math.random() * happyAffirm.length)].text);
+
+  selectedText = happyAffirm[Math.floor(Math.random() * happyAffirm.length)].text;
+
+  return (selectedText);
 }
 
 const HappyScreen = () => {
@@ -20,11 +35,23 @@ const HappyScreen = () => {
     >{randomHappy(happyAffirm)}</Text>
     </View>
     </Card>
+    <View style={styles.buttonContainer}>
+    <Button
+      onPress={pushFavorite}
+      title="Display Favorite"
+      color='#007AFF'
+    />
+    </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+
+  buttonContainer: {
+    backgroundColor: "#f0ff",
+  },
+
   container: {
     flex: 1,
     backgroundColor: "#ffefd5",
