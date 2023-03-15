@@ -17,22 +17,42 @@ const App = () => {
       <Stack.Screen 
       name="HomeScreen" 
       component={HomeScreen} 
-      options={{ title: 'Home' }}
+      options={{ 
+        title: '',
+        headerStyle: {
+          backgroundColor: "#ffefd5",
+        },
+      }}
       />
       <Stack.Screen 
       name="HappyScreen" 
       component={HappyScreen}
-      options={{ title: 'Mood: Happy' }}
+      options={{ 
+        title: 'Mood: Happy', 
+        headerStyle: {
+          backgroundColor: "#ffefd5",
+        },
+      }}
        />
       <Stack.Screen 
       name="SadScreen" 
       component={SadScreen} 
-      options={{ title: 'Mood: Sad' }}
+      options={{ 
+        title: 'Mood: Sad',
+        headerStyle: {
+          backgroundColor: "#ffefd5",
+        },
+      }}
       />
       <Stack.Screen 
       name="AngryScreen" 
       component={AngryScreen} 
-      options={{ title: 'Mood: Angry' }}
+      options={{ 
+        title: 'Mood: Angry',
+        headerStyle: {
+          backgroundColor: "#ffefd5",
+        },
+      }}
       />
 
     </Stack.Navigator>
