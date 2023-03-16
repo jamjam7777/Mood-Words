@@ -1,6 +1,10 @@
 import React from "react";
 import { createStackNavigator } from '@react-navigation/stack';
+import { registerRootComponent } from 'expo';
 import { NavigationContainer } from "@react-navigation/native";
+import { createDrawerNavigator,
+  DrawerContentScrollView,
+  DrawerItemList } from '@react-navigation/drawer';
 import { StyleSheet } from "react-native";
 import HomeScreen from "./screens/HomeScreen";
 import HappyScreen from "./screens/HappyScreen";
@@ -9,9 +13,12 @@ import AngryScreen from './screens/AngryScreen';
 import FavoritesScreen from "./screens/FavoritesScreen";
 
 
+
+
+const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 
-const App = () => {
+export default function App()  {
   return (
     <NavigationContainer>
     <Stack.Navigator initialRouteName='HomeScreen'>
@@ -68,10 +75,47 @@ const App = () => {
     </Stack.Navigator>
     </NavigationContainer>
   );
-};
+   }
+
+   registerRootComponent(App);
+  
+
+  const Home= () => {
+    return (
+      <Drawer.Navigator>
+        <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Settings" component={Settings} />
+      </Drawer.Navigator>
+    );
+  }
 
 
 
-const styles = StyleSheet.create({});
+  const styles = StyleSheet.create({
+    drawerHeader: {
+        backgroundColor: '#5637DD',
+        height: 140,
+        alignItems: 'center',
+        justifyContent: 'center',
+        flex: 1,
+        flexDirection: 'row'
+    },
+    drawerHeaderText: {
+        color: '#fff',
+        fontSize: 24,
+        fontWeight: 'bold'
+    },
+    drawerImage: {
+        margin: 10,
+        height: 60,
+        width: 60
+    },
+    stackIcon: {
+        marginLeft: 10,
+        color: '#fff',
+        fontSize: 24
+    }
+  });
 
-export default App;
+
