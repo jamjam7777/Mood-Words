@@ -6,6 +6,7 @@ import HomeScreen from "./screens/HomeScreen";
 import HappyScreen from "./screens/HappyScreen";
 import SadScreen from './screens/SadScreen';
 import AngryScreen from './screens/AngryScreen';
+import FavoritesScreen from "./screens/FavoritesScreen";
 
 
 const Stack = createStackNavigator();
@@ -54,11 +55,22 @@ const App = () => {
         },
       }}
       />
-
+    <Stack.Screen 
+      name="FavoritesScreen" 
+      component={FavoritesScreen} 
+      options={{ 
+        title: 'My Favorites',
+        headerStyle: {
+          backgroundColor: "#ffefd5",
+        },
+      }}
+      />
     </Stack.Navigator>
     </NavigationContainer>
   );
 };
+
+
 
 const styles = StyleSheet.create({});
 
