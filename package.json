@@ -22,13 +22,7 @@
     "react-native-elements": "^3.4.3",
     "react-native-gesture-handler": "~2.9.0",
     "react-native-push-notification-popup": "^1.6.1",
-<<<<<<< HEAD
     "react-native-reanimated": "~2.14.4"
-=======
-    "react-native-reanimated": "~2.2.0",
-    "react-native-swipe-list-view": "^3.2.9",
-    "react-redux": "^8.0.5"
->>>>>>> refs/remotes/origin/main
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
