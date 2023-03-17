@@ -9,6 +9,8 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.5.7",
+    "@react-navigation/drawer": "^6.6.2",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/stack": "^6.3.16",
     "expo": "~48.0.4",
@@ -20,7 +22,13 @@
     "react-native-elements": "^3.4.3",
     "react-native-gesture-handler": "~2.9.0",
     "react-native-push-notification-popup": "^1.6.1",
+<<<<<<< HEAD
     "react-native-reanimated": "~2.14.4"
+=======
+    "react-native-reanimated": "~2.2.0",
+    "react-native-swipe-list-view": "^3.2.9",
+    "react-redux": "^8.0.5"
+>>>>>>> refs/remotes/origin/main
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

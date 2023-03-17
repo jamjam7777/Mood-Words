@@ -2,9 +2,15 @@ import React from "react";
 import { createStackNavigator } from '@react-navigation/stack';
 import { registerRootComponent } from 'expo';
 import { NavigationContainer } from "@react-navigation/native";
+<<<<<<< HEAD
 // import { createDrawerNavigator,
 //   DrawerContentScrollView,
 //   DrawerItemList } from '@react-navigation/drawer';
+=======
+import { createDrawerNavigator,
+  DrawerContentScrollView,
+  DrawerItemList } from '@react-navigation/drawer';
+>>>>>>> refs/remotes/origin/main
 import { StyleSheet } from "react-native";
 import HomeScreen from "./screens/HomeScreen";
 import HappyScreen from "./screens/HappyScreen";
@@ -15,7 +21,11 @@ import FavoritesScreen from "./screens/FavoritesScreen";
 
 
 
+<<<<<<< HEAD
 // const Drawer = createDrawerNavigator();
+=======
+const Drawer = createDrawerNavigator();
+>>>>>>> refs/remotes/origin/main
 const Stack = createStackNavigator();
 
 export default function App()  {
@@ -80,6 +90,7 @@ export default function App()  {
    registerRootComponent(App);
   
 
+<<<<<<< HEAD
   // const Home= () => {
   //   return (
   //     <Drawer.Navigator>
@@ -89,6 +100,17 @@ export default function App()  {
   //     </Drawer.Navigator>
   //   );
   // }
+=======
+  const Home= () => {
+    return (
+      <Drawer.Navigator>
+        <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Settings" component={Settings} />
+      </Drawer.Navigator>
+    );
+  }
+>>>>>>> refs/remotes/origin/main
 
 
 
