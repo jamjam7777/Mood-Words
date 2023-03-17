@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+// import { useDispatch, useSelector } from "react-redux";
 import {
   View,
   FlatList,
@@ -7,10 +7,10 @@ import {
   StyleSheet,
   Alert,
 } from "react-native";
-import { ListItem } from "react-native-elements";
-import { SwipeRow } from "react-native-swipe-list-view";
-import { toggleFavorite } from "../features/favoritesSlice";
-import * as Animatable from "react-native-animatable";
+// import { ListItem } from "react-native-elements";
+// import { SwipeRow } from "react-native-swipe-list-view";
+// import { toggleFavorite } from "../features/favoritesSlice";
+// import * as Animatable from "react-native-animatable";
 
 const FavoritesScreen = ({ navigation }) => {
   const { campsitesArray, errMess } = useSelector(
