@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, Text, View, Pressable } from "react-native";
 import { Card } from "react-native-elements";
 import {happyAffirm} from "../components/happyAffirm";
 
@@ -30,26 +30,47 @@ const HappyScreen = () => {
       style={{
         color: '#2f4f4f',
         fontSize: 30,
-        padding: 50,
+        padding: 60,
       }}
     >{randomHappy(happyAffirm)}</Text>
     </View>
     </Card>
-    <View style={styles.buttonContainer}>
-    <Button
-      onPress={pushFavorite}
-      title="Display Favorite"
-      color='#007AFF'
-    />
+    <View style={styles.button}>
+    <Pressable 
+      onPress={pushFavorite}>
+        <Text style={styles.text}>Show me today</Text>
+      </Pressable>
+    </View>
+    <View style={styles.button}>
+    <Pressable 
+      onPress={pushFavorite}>
+        <Text style={styles.text}>Not Feeling it</Text>
+      </Pressable>
     </View>
     </View>
+    
   );
 };
 
 const styles = StyleSheet.create({
 
-  buttonContainer: {
-    backgroundColor: "#f0ff",
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: '#5f9ea0',
+  },
+
+  text: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: 'bold',
+    letterSpacing: 0.25,
+    color: 'white',
+    width: 200,
   },
 
   container: {
