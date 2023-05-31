@@ -14,6 +14,7 @@ const AngryScreen = () => {
       <Text 
       style={{
         color: '#2f4f4f',
+        backgroundColor: "#fffaf0",
         fontSize: 30,
         padding: 50,
       }}

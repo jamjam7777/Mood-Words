@@ -29,6 +29,7 @@ const HappyScreen = () => {
       <Text 
       style={{
         color: '#2f4f4f',
+        backgroundColor: "#fffaf0",
         fontSize: 30,
         padding: 60,
       }}
@@ -38,7 +39,7 @@ const HappyScreen = () => {
     <View style={styles.button}>
     <Pressable 
       onPress={pushFavorite}>
-        <Text style={styles.text}>Show me today</Text>
+        <Text style={styles.text}>Remind me today</Text>
       </Pressable>
     </View>
     <View style={styles.button}>
@@ -79,6 +80,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+
+  Pressable: {
+    padding: 20,
+  }
   
 });
 
