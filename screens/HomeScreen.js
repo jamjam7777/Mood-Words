@@ -16,9 +16,9 @@ const HomeScreen = () => {
       <Text
         style={{
           color: "#2f4f4f",
-          fontSize: 50,
+          fontSize: 58,
           fontWeight: "bold",
-          padding: 30,
+          padding: 2,
         }}
       >
         What is your mood today?
@@ -61,14 +61,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  imageContainer: {
-    flex: 1,
-    paddingTop: 10,
-  },
+ 
   image: {
     width: 120,
     height: 120,
     borderRadius: 50,
+    marginVertical: 10,
   },
 });
 

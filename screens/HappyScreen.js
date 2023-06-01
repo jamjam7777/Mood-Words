@@ -39,7 +39,7 @@ const HappyScreen = () => {
     <View style={styles.button}>
     <Pressable 
       onPress={pushFavorite}>
-        <Text style={styles.text}>Remind me today</Text>
+        <Text style={styles.text}>Remind me today!</Text>
       </Pressable>
     </View>
     <View style={styles.button}>
@@ -60,16 +60,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingVertical: 12,
     paddingHorizontal: 32,
-    borderRadius: 4,
+    borderRadius: 8,
     elevation: 3,
     backgroundColor: '#5f9ea0',
+    marginVertical: 13,
   },
 
   text: {
-    fontSize: 16,
+    fontSize: 18,
     lineHeight: 21,
-    fontWeight: 'bold',
     letterSpacing: 0.25,
+    padding: 8,
     color: 'white',
     width: 200,
   },
@@ -79,11 +80,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffefd5",
     alignItems: "center",
     justifyContent: "center",
+    marginVertical: 15,
   },
 
-  Pressable: {
-    padding: 20,
-  }
+  
   
 });
 
