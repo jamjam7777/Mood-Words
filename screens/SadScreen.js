@@ -1,9 +1,17 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Pressable } from "react-native";
 import { Card } from "react-native-elements";
 import {sadAffirm} from "../components/sadAffirm";
 
 function randomSad(sadAffirm) {
   return (sadAffirm[Math.floor(Math.random() * sadAffirm.length)].text);
+}
+
+function pushFavorite(){
+  // let favoriteText;
+  // favoriteText = selectedText; 
+  favoritesArr.push(selectedText)
+  
+  console.log(favoritesArr)
 }
 
 const SadScreen = () => {
@@ -21,6 +29,18 @@ const SadScreen = () => {
     >{randomSad(sadAffirm)}</Text>
     </View>
     </Card>
+    <View style={styles.button}>
+    <Pressable 
+      onPress={pushFavorite}>
+        <Text style={styles.text}>Remind me today!</Text>
+      </Pressable>
+    </View>
+    <View style={styles.button}>
+    <Pressable 
+      onPress={pushFavorite}>
+        <Text style={styles.text}>Not Feeling it</Text>
+      </Pressable>
+    </View>
     </View>
   );
 };
@@ -32,6 +52,26 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 15,
+  },
+
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 8,
+    elevation: 3,
+    backgroundColor: '#5f9ea0',
+    marginVertical: 13,
+  },
+
+  text: {
+    fontSize: 18,
+    lineHeight: 21,
+    letterSpacing: 0.25,
+    padding: 8,
+    color: 'white',
+    width: 200,
   },
 });
 
