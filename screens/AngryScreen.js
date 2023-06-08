@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import { Card } from "react-native-elements";
 import {angryAffirm} from "../components/angryAffirm";
+import { useState } from "react";
 
 function randomAngry(angryAffirm) {
   return (angryAffirm[Math.floor(Math.random() * angryAffirm.length)].text);
@@ -15,6 +16,9 @@ function pushFavorite(){
 }
 
 const AngryScreen = () => {
+
+  const [newState, setNewState] = useState(false);
+
   return (
     <View style={styles.container}>
     <Card>
@@ -37,8 +41,10 @@ const AngryScreen = () => {
     </View>
     <View style={styles.button}>
     <Pressable 
-      onPress={pushFavorite}>
-        <Text style={styles.text}>Not Feeling it</Text>
+      onPress={() => {
+        setNewState(!newState);
+      }}>
+        <Text style={styles.text}>Not feeling it</Text>
       </Pressable>
     </View>
     </View>

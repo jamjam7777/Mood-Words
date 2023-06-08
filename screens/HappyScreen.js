@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import { Card } from "react-native-elements";
 import {happyAffirm} from "../components/happyAffirm";
+import { useState } from "react";
 
 let selectedText;
 
@@ -22,6 +23,9 @@ function randomHappy(happyAffirm) {
 }
 
 const HappyScreen = () => {
+
+  const [newState, setNewState] = useState(false);
+
   return (
     <View style={styles.container}>
     <Card>
@@ -44,7 +48,9 @@ const HappyScreen = () => {
     </View>
     <View style={styles.button}>
     <Pressable 
-      onPress={pushFavorite}>
+      onPress={() => {
+        setNewState(!newState);
+      }}>
         <Text style={styles.text}>Not Feeling it</Text>
       </Pressable>
     </View>
